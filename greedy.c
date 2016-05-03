@@ -41,7 +41,7 @@ int main(void)
     do
     {
         printf("How much change is owed? ");
-        money = GetFloat() * 100.000;
+        money = GetFloat() * 100;
         penny = round(money);
     }
     while (penny < 1);
