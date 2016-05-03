@@ -5,7 +5,7 @@
 // Функция получает количество центов и возвращает количество монет
 int coins(penny)
 {
-    int ostatok, monet=0;
+    int ostatok, monet = 0;
     for (int i = 4; i > 0; i--)
     {
         int nominal;
