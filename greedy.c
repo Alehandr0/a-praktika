@@ -6,19 +6,23 @@
 int coins(penny)
 {
     int ostatok, monet=0;
-    for (int i = 6; i <= 9; i++)
+    for (int i = 4; i > 0; i--)
     {
         int nominal;
         switch (i)
         {
-            case 6: nominal = 25; break;
-            case 7: nominal = 10; break;
-            case 8: nominal = 5; break;
-            case 9: nominal = 1; break;
+            case 1: nominal = 1; break;     //  Один цент
+            case 2: nominal = 5; break;
+            case 3: nominal = 10; break;
+            case 4: nominal = 25; break;
+            case 5: nominal = 50; break;    //  Пятдесят центов
+            case 6: nominal = 100; break;   //  Один доллар
+            case 7: nominal = 200; break;   //  Два доллара
+            case 8: nominal = 500; break;   //  Пять долларов
         }
      
         ostatok = penny % nominal;
-        monet += (penny - penny % nominal) / nominal;
+        monet += (penny - ostatok) / nominal;
         penny = ostatok;
     }
     return monet;
