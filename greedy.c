@@ -6,7 +6,7 @@
 int coins(penny)
 {
     int ostatok, monet = 0;
-    for (int i = 4; i > 0; i--)
+    for (int i = 4 /* <<< метка 1 */; i > 0; i--)
     {
         int nominal;
         switch (i)
@@ -19,6 +19,11 @@ int coins(penny)
             case 6: nominal = 100; break;   //  Один доллар
             case 7: nominal = 200; break;   //  Два доллара
             case 8: nominal = 500; break;   //  Пять долларов
+/**
+* Здесь добавляются номиналы монет и купюр
+* Для активации этих вариантов номиналов надо изменить значение параметра переменной - i , расположенной в метка-1
+* 
+*/
         }
      
         ostatok = penny % nominal;
@@ -36,8 +41,8 @@ int main(void)
     do
     {
         printf("How much change is owed? ");
-        money = GetFloat() * 10000.000;
-        penny = floor(floor(money) / 100);
+        money = GetFloat() * 100.000;
+        penny = round(money);
     }
     while (penny < 1);
 
