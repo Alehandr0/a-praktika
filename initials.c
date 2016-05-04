@@ -6,11 +6,9 @@
 // Эта функция ведёт поиск начала слова и печатает первую букву в верхнем регистре
 void PrintFirst(in, in0)
 {
-    in = toupper(in);
-    in0 = toupper(in0);
-  if (isalpha(in0) && !isalpha(in))
+    if (isalpha(in0) && !isalpha(in))
     {
-        printf("%c", in0);
+        printf("%c", toupper(in0));
     }
 }
 
@@ -19,7 +17,6 @@ int main(void)
     string s = GetString();
     if (s != NULL)
     {
-        
         for(int i = 0, a = strlen(s); i < a; i++)
         {
             PrintFirst(s[i-1], s[i]);
