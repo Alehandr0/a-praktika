@@ -4,9 +4,9 @@
 #include <string.h>
 
 // Эта функция проверяет закодирована ли загланая английская буква числовым аргументом в соответствии с ASCII
-bool IsCapital(int in)
+bool IsCapital(int n)
 {
-    if (in >= 'A' && in <= 'Z')
+    if (n >= 'A' && n <= 'Z')
         return 1;
     else
         return 0;
@@ -38,6 +38,6 @@ int main(void)
 }
 /**
 * Результат автоматической проверки находится по адресу:
-* https://sandbox.cs50.net/checks/b21d69bb5cb04b4e9070a5b861984d05
+* https://sandbox.cs50.net/checks/f8d51792e6eb4b5eb0ce52344a5553a7
 * 
 */
