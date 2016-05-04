@@ -3,21 +3,12 @@
 #include <ctype.h>
 #include <string.h>
 
-// Эта функция проверяет закодирована ли загланая английская буква числовым аргументом в соответствии с ASCII
-bool IsCapital(int n)
-{
-    if (n >= 'A' && n <= 'Z')
-        return 1;
-    else
-        return 0;
-}
-
 // Эта функция ведёт поиск начала слова и печатает первую букву в верхнем регистре
 void PrintFirst(in, in0)
 {
     in = toupper(in);
     in0 = toupper(in0);
-    if (IsCapital(in0) && !IsCapital(in))
+  if (isalpha(in0) && !isalpha(in))
     {
         printf("%c", in0);
     }
