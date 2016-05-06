@@ -18,6 +18,11 @@ char letter(int b, int key)
 
 int main(int n, char* ar[])
 {
+    if (n != 2)
+    {
+        printf("Запуск программы должен быть с параметром. К примеру, как в кавычках \"./caesar 71\"\n");
+        return 1;
+    }
     int key = 0, a = strlen(ar[1]);
     for (int i = a - 1; i >= 0; i--)
     {
