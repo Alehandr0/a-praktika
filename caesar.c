@@ -39,6 +39,6 @@ int main(int n, char* argv[])
 }
 /**
 * Результат автоматической проверки находится по адресу:
-* https://sandbox.cs50.net/checks/b6bb267d592b49bbacd4ea8176548a03
+* https://sandbox.cs50.net/checks/3b47c0ad23864972a5444109cd63393e
 * 
 */
