@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include <stdlib.h>
 
 // Эта функция получает букву и ключ и возвращает закодированную букву
 char letter(int b, int key)
