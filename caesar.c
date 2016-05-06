@@ -31,7 +31,6 @@ int main(int n, char* ar[])
             key = 0;
             break;
         }
-//        printf("Ключ = %i * 10^%i\n", key, a-i-1);
     }
     key = key % 26;
     printf("Ключ = %i\n", key);
