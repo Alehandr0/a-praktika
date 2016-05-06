@@ -4,6 +4,7 @@
 #include <ctype.h>
 #include <string.h>
 
+// Эта функция получает букву и ключ и возвращает закодированную букву
 char letter(int b, int key)
 {
     int dop=90;
@@ -13,7 +14,7 @@ char letter(int b, int key)
     return b;
 }
 
-int main(int n, char* ar[])
+int main(int n, char* argv[])
 {
     if (n != 2)
     {
@@ -21,12 +22,14 @@ int main(int n, char* ar[])
         return 1;
     }
     
+
     int key = atoi(argv[1]) % 26;
     string s = GetString();
     if (s != NULL)
     {
         for(int i = 0, phrase = strlen(s); i < phrase; i++)
         {
+// Далее проверяется каждая буква пользовательского ввода и только буквы отправляются на кодировку
             if (isalpha(s[i])) s[i] = letter(s[i], key);
             printf("%c", s[i]);
         }
