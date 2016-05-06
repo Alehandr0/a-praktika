@@ -33,3 +33,8 @@ int main(int n, char* ar[])
         printf("\n");
     }
 }
+/**
+* Результат автоматической проверки находится по адресу:
+* https://sandbox.cs50.net/checks/b6bb267d592b49bbacd4ea8176548a03
+* 
+*/
