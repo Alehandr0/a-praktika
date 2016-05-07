@@ -17,11 +17,11 @@ int main(int n, char* w[])
         return 1;
     }
 
-    int len_key = strlen(w[1]) - 1;
-    int key_arr[len_key];
+    int len_key = strlen(w[1]);
+    int key_arr[len_key - 1];
 
 // Далее проверяется каждая буква ключа и только если все символы являются буквами - ключ будет считаться действительным
-    for(int i = 0; i <= len_key; i++)
+    for(int i = 0; i < len_key; i++)
     {
         if (!isalpha(w[1][i]))
         {
@@ -42,8 +42,9 @@ int main(int n, char* w[])
     {
         if (isalpha(s[i]))
         {
+            next %= len_key;
             s[i] = caesar(s[i], key_arr[next]);
-            next++; if (next > len_key) next = 0;
+            next++;
         }
         printf("%c", s[i]);
     }
@@ -63,5 +64,5 @@ char caesar(int b, int key)
 Результат автоматической проверки:
 check50 2014.fall.pset2.vigenere vigenere.c
 находится по адресу:
-https://sandbox.cs50.net/checks/a9a6c7f4531e4ca4bd08c35a05f46921
+https://sandbox.cs50.net/checks/951c39f4ab80456d893ad5a13571cb47
 */
