@@ -5,10 +5,6 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define L 26
-// Далее константа равнвна значению ASCII первого символа алфавита, так как в метка-1 используется функция toupper()
-#define Bascii 65
-
 // Прототип
 char caesar(int b, int key);
 
@@ -23,27 +19,24 @@ int main(int n, char* w[])
 
     int len_key = strlen(w[1]) - 1;
     int key_arr[len_key];
-    printf("%s ,  len_key = %i Проверим, чтоб в ключе были только буквы.\n", w[1], len_key);
 
-// Проверим, чтоб в ключе были только буквы
+// Далее проверяется каждая буква ключа и только если все символы являются буквами - ключ будет считаться действительным
     for(int i = 0; i <= len_key; i++)
     {
-// Далее проверяется каждая буква ключа и только если все символы буквы - ключ будет считаться действительным
         if (!isalpha(w[1][i]))
         {
             printf("Запуск программы должен быть с обязательным параметром в виде строки. К примеру, как в кавычках \"./vigenere TEXT\"\n");
             return 1;
         }
-        w[1][i] = /* метка-1 */toupper(w[1][i]);
-        key_arr[i] = w[1][i] - Bascii;
-
-        printf("%i ", key_arr[i]);
+        w[1][i] = toupper(w[1][i]);
+        key_arr[i] = w[1][i] - 65;
     }
-    printf("\n");
 
+// Пользовательский ввод с проверкой
     string s = GetString();
     if (s == NULL) return 1;
 
+// Здесь проходит разделение фразы пользоательского ввода на отдельные символы, для кодировки
     int next=0;
     for(int i = 0, a = strlen(s); i < a; i++)
     {
@@ -70,5 +63,5 @@ char caesar(int b, int key)
 Результат автоматической проверки:
 check50 2014.fall.pset2.vigenere vigenere.c
 находится по адресу:
-https://sandbox.cs50.net/checks/af9edaec62644d31b279cbb225126a87
+https://sandbox.cs50.net/checks/a9a6c7f4531e4ca4bd08c35a05f46921
 */
