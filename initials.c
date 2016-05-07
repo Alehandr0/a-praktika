@@ -25,7 +25,8 @@ int main(void)
     }
 }
 /**
-* Результат автоматической проверки находится по адресу:
-* https://sandbox.cs50.net/checks/f8d51792e6eb4b5eb0ce52344a5553a7
-* 
+Результат автоматической проверки:
+check50 2014.fall.hacker2.initials initials.c
+находится по адресу:
+https://sandbox.cs50.net/checks/3c52d771d66b4ee7b5bd7800ff0e679b
 */
