@@ -5,15 +5,8 @@
 #include <string.h>
 #include <stdlib.h>
 
-// Эта функция получает ASCII буквы и ключ, результатом возвращает закодированную букву
-char letter(int b, int key)
-{
-    int dop=90;
-    if (islower(b)) dop=122;
-    b = b + key;
-    if (b > dop) b -= 26;
-    return b;
-}
+// Пртотип кодировщика
+char letter(int b, int key);
 
 int main(int n, char* argv[])
 {
@@ -36,8 +29,20 @@ int main(int n, char* argv[])
         printf("\n");
     }
 }
+
+// Эта функция получает ASCII буквы и ключ, результатом возвращает закодированную букву
+char letter(int b, int key)
+{
+    int dop=90;
+    if (islower(b)) dop=122;
+    b = b + key;
+    if (b > dop) b -= 26;
+    return b;
+}
+
 /**
-* Результат автоматической проверки находится по адресу:
-* https://sandbox.cs50.net/checks/3b47c0ad23864972a5444109cd63393e
-* 
+Результат автоматической проверки:
+check50 2014.fall.pset2.caesar caesar.c
+находится по адресу:
+https://sandbox.cs50.net/checks/d10488c2d30e49faac1e884cb92c9e85
 */
