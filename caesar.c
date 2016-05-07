@@ -5,7 +5,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-// Эта функция получает букву и ключ и возвращает закодированную букву
+// Эта функция получает ASCII буквы и ключ, результатом возвращает закодированную букву
 char letter(int b, int key)
 {
     int dop=90;
@@ -22,7 +22,6 @@ int main(int n, char* argv[])
         printf("Запуск программы должен быть с параметром. К примеру, как в кавычках \"./caesar 71\"\n");
         return 1;
     }
-    
 
     int key = atoi(argv[1]) % 26;
     string s = GetString();
