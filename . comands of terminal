@@ -2,3 +2,5 @@
     Ctrl + l (el)
 Мануал для функции языка С -
     man function ( например: man strlen )
+Открывает в консоли содержимое файла -
+    vim filename.any ( например: vim log.txt )
