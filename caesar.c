@@ -33,8 +33,8 @@ int main(int n, char* argv[])
 // Эта функция получает ASCII буквы и ключ, результатом возвращает закодированную букву
 char letter(int b, int key)
 {
-    int dop=90;
-    if (islower(b)) dop=122;
+    int dop = 90;
+    if (islower(b)) dop = 122;
     b = b + key;
     if (b > dop) b -= 26;
     return b;
