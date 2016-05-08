@@ -54,8 +54,8 @@ int main(int n, char* w[])
 // Эта функция получает букву и ключ и возвращает закодированную букву
 char caesar(int b, int key)
 {
-    int dop=90;
-    if (islower(b)) dop=122;
+    int dop = 90;
+    if (islower(b)) dop = 122;
     b = b + key;
     if (b > dop) b -= 26;
     return b;
