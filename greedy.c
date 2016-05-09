@@ -14,7 +14,7 @@ int coins(penny)
             case 1: nominal = 1; break;     //  Один цент
             case 2: nominal = 5; break;
             case 3: nominal = 10; break;
-            case 4: nominal = 25; break;
+            case 4: nominal = 25; break;    //  Двадцать пять центов
             case 5: nominal = 50; break;    //  Пятдесят центов
             case 6: nominal = 100; break;   //  Один доллар
             case 7: nominal = 200; break;   //  Два доллара
