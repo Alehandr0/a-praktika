@@ -26,7 +26,6 @@ bool search(int value, int values[], int n)
             return true;
         }
     }
-//      //    printf("Поиск работает!\n");
     return false;
 }
 
